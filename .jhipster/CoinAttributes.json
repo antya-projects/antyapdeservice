@@ -1,0 +1,29 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "coin",
+            "otherEntityName": "coin",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "minConfirmation",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "txnFees",
+            "fieldType": "BigDecimal"
+        }
+    ],
+    "changelogDate": "20180125095125",
+    "entityTableName": "coin_attributes",
+    "dto": "mapstruct",
+    "pagination": "infinite-scroll",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "angularJSSuffix": "mySuffix",
+    "microserviceName": "antyapdeservice"
+}

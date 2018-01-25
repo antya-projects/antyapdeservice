@@ -1,0 +1,41 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "coinAttributes",
+            "otherEntityName": "coinAttributes",
+            "otherEntityRelationshipName": "coin"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "coinCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "coinInfoUrl",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "coinImageUrl",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "coinName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "isActive",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20180125095124",
+    "entityTableName": "coin",
+    "dto": "mapstruct",
+    "pagination": "infinite-scroll",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "angularJSSuffix": "mySuffix",
+    "microserviceName": "antyapdeservice"
+}
