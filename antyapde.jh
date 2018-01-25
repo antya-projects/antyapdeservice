@@ -1,0 +1,94 @@
+
+entity Coin {
+	coinCode String,
+	coinInfoUrl String,
+	coinImageUrl String,
+	coinName String,
+	isActive Integer
+}
+
+entity CoinAttributes{
+	minConfirmation Integer,
+	txnFees BigDecimal
+}
+
+entity Market {
+	currencyPairCode String,
+    name String,
+    marketCurrency String,
+    baseCurrency String,
+    minTradeSize Integer,
+    maxTradeSize Integer,
+    manualTradeQty Long,
+    isActive Integer,
+    commission BigDecimal 
+}
+
+entity MarketPrice{
+	currentPrice BigDecimal,
+    timeStamp Instant
+}
+
+entity MarketDetails {
+	highPrice BigDecimal,
+    lowPrice BigDecimal,
+    lastPrice BigDecimal,
+    askPrice BigDecimal,
+    bidPrice BigDecimal, 
+    volume24hours BigDecimal,
+    timeStamp Instant,
+    isActive Integer
+}
+
+entity Exchange{
+	name String,
+    country String,
+    isActive Integer  
+}
+
+relationship OneToMany {
+	Coin{coinAttributes} to CoinAttributes
+}
+
+// defining multiple oneToOne relationships
+//relationship OneToMany {
+//	Market{coin} to Coin
+   
+//}
+
+relationship ManyToOne {
+	Market{exchange} to Exchange
+}
+
+relationship ManyToOne {
+	MarketDetails{exchange} to Exchange
+}
+relationship ManyToOne {
+	MarketPrice{exchange} to Exchange
+}
+
+
+
+relationship ManyToOne {
+	MarketDetails{market} to Market
+     
+}
+
+relationship ManyToOne {
+	MarketPrice{market} to Market
+    
+}
+
+
+
+// Set pagination options
+paginate Coin,CoinAttributes,Market,MarketPrice,MarketDetails,
+Exchange with infinite-scroll
+
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl 
+// Set an angular suffix
+angularSuffix * with mySuffix
+
