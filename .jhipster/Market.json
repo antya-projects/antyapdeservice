@@ -1,0 +1,57 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "exchange",
+            "otherEntityName": "exchange",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "currencyPairCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "marketCurrency",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "baseCurrency",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "minTradeSize",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "maxTradeSize",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "manualTradeQty",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "isActive",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "commission",
+            "fieldType": "BigDecimal"
+        }
+    ],
+    "changelogDate": "20180125095126",
+    "entityTableName": "market",
+    "dto": "mapstruct",
+    "pagination": "infinite-scroll",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "angularJSSuffix": "mySuffix",
+    "microserviceName": "antyapdeservice"
+}

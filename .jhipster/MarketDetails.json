@@ -1,0 +1,59 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "exchange",
+            "otherEntityName": "exchange",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "market",
+            "otherEntityName": "market",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "highPrice",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "lowPrice",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "lastPrice",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "askPrice",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "bidPrice",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "volume24hours",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "timeStamp",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "isActive",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20180125095128",
+    "entityTableName": "market_details",
+    "dto": "mapstruct",
+    "pagination": "infinite-scroll",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "angularJSSuffix": "mySuffix",
+    "microserviceName": "antyapdeservice"
+}
